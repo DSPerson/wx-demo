@@ -1,0 +1,52 @@
+<view class="page">
+    
+    
+    <!--轮播图-->
+   <swiper indicator-dots="{{indicatorDots}}" autoplay = "{{autoplay}}" interval = "{{interval}}" duration = "{{swiperDuration}}"> 
+        <block wx:for = "{{adsArray}}">
+            <swiper-item>
+                <image src = "{{item.ds_img}}" class = "swiper_item"> </image> 
+             </swiper-item>
+        </block>
+   </swiper>
+
+
+   <!--正文-->
+ <view class = "body" wx:for ="{{root_data}}" wx:for-index = "idx">
+    <view style = "display: flex;flex-direction: row;"> 
+        <view class = "body_view_img">
+            <image class = "body_img" src = "{{item.shop_owner_img}}"> </image> 
+         </view>
+         <view class = "body_view_detail">
+            <!--名字-->
+            <view class = "detail_name">{{item.shop_owner}}</view>
+            <!--字体详情navigator-->
+            <!--<navigator url = "../Detail/detail" hover-class="navigator-hover">-->
+            <view bindtap = "pushDetail" class = "detail_words">这是一个Demo这是一个Demo这是一个Demo这是一个Demo这是一个Demo这是一个Demo这是一个Demo这是一个Demo这是一个Demo这是一个Demo这是一个Demo </view>
+             <!--</navigator>-->
+            <!--中间图片和右面空白-->
+            <view class = "detail_mid">
+                <!--图片-->
+                <view class = "detail_mid_imageView"  wx:for = "{{item.goods}}" wx:for-index = "index" wx:for-item = "cell">
+                    <image  src = "{{cell}}"  class = "detail_mid_img"> </image>
+                </view>
+             </view>
+             <!--时间和聊天按钮-->
+             <view class = "detail_last_view">
+                <view>1小时前 </view>
+                <image animation = "{{ talkViewShowIdIndex == idx ? animation : ''}}" bindtap = "chatWithShop" id = "{{idx}}" src = "/image/chat@2x.png" style = "height:32rpx;width:32rpx;margin-left:{{widnowWidth - 30 - 100}}px;" > </image>
+             </view>
+         </view>
+     </view>
+
+      <view  id = "{{idx}}" class = "{{talkViewShowIdIndex == idx && talkViewOpen == true ? 'talk_view_show' : 'talk_view_hidden'}}"  >
+            <text style = "font-size:11px">{{talkMessage}}</text>
+      </view>
+     <view style = "height:2rpx;width:100%;background-color:lightgray;"></view>
+   </view>
+  
+  <view style = "height:70rpx;background-color:#fff"> </view>
+
+
+
+</view>

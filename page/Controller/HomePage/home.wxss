@@ -1,0 +1,90 @@
+.swiper_item {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+.body {
+    /*display: inline-block;*/
+    display: flex;
+    /*height: 100%;*/
+    flex-direction: column;
+}
+.body_view_img {
+    flex: 1;
+    background-color: #fff;
+    padding-top: 30rpx;
+    padding-left: 30rpx;
+}
+.body_view_detail {
+    flex: 8;
+    padding-top: 30rpx;
+    background-color: #fff;
+}
+.body_img {
+    height: 60rpx;
+    width: 60rpx;
+}
+.detail_name {
+    font-size: 14px;
+    color: #5A6B8D;
+    /*margin-top: 10rpx;*/
+    margin-right: 30rpx;
+}
+.detail_words {
+    margin-top: 10rpx;
+    font-size: 12px;
+    padding-right: 30rpx;
+}
+
+
+.detail_mid_view {
+    /*flex: 1;*/
+
+}
+.body_time {
+    font-size: 11px;
+    margin-top: 10rpx;
+    color: lightgray;
+}
+.detail_mid {
+    margin-top: 10rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.detail_mid_imageView {
+    /*flex-wrap: wrap;*/
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    box-sizing:border-box;
+    align-items: center;
+    padding:8rpx;
+}
+.detail_mid_img {
+    height: 150rpx;
+    width: 150rpx;
+}
+.detail_last_view {
+    margin-top: 10rpx;
+    font-size: 11px;
+    color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10rpx;
+}
+
+.talk_view_show {
+    display: block;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    margin-bottom: 10rpx;
+    margin-right: 30rpx;
+    margin-left: 50rpx;
+    padding-bottom: 10rpx;
+    padding-left: 10rpx;
+    word-wrap: break-word;
+}
+.talk_view_hidden {
+    display: none;
+}
